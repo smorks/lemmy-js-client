@@ -13,4 +13,6 @@ export interface PrivateMessage {
   updated?: string;
   ap_id: string;
   local: boolean;
+  removed: boolean;
+  deleted_by_recipient: boolean;
 }

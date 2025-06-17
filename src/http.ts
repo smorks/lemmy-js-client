@@ -140,6 +140,7 @@ import { HidePost } from "./types/HidePost";
 import { ListMedia } from "./types/ListMedia";
 import { ListMediaResponse } from "./types/ListMediaResponse";
 import { GetRegistrationApplication } from "./types/GetRegistrationApplication";
+import { DeletePrivateMessageForRecipient } from "./types/DeletePrivateMessageForRecipient";
 
 enum HttpType {
   Get = "GET",
@@ -970,6 +971,18 @@ export class LemmyHttp {
       "/private_message/delete",
       form,
     );
+  }
+
+  /**
+   * Delete a private message for a recipient.
+   *
+   * `HTTP.POST /private_message/delete_for_recipient`
+   */
+  deletePrivateMessageForRecipient(form: DeletePrivateMessageForRecipient) {
+    return this.#wrapper<
+      DeletePrivateMessageForRecipient,
+      PrivateMessageResponse
+    >(HttpType.Post, "/private_message/delete_for_recipient", form);
   }
 
   /**

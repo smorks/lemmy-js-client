@@ -71,6 +71,7 @@ export { DeleteCommunity } from "./types/DeleteCommunity";
 export { DeleteCustomEmoji } from "./types/DeleteCustomEmoji";
 export { DeletePost } from "./types/DeletePost";
 export { DeletePrivateMessage } from "./types/DeletePrivateMessage";
+export { DeletePrivateMessageForRecipient } from "./types/DeletePrivateMessageForRecipient";
 export { DistinguishComment } from "./types/DistinguishComment";
 export { EditComment } from "./types/EditComment";
 export { EditCommunity } from "./types/EditCommunity";
